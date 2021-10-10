@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Australian Property Sales Price",
+    "width": 800,
+    "height": 600,
+    "projection": {"type": "equirectangular"},
+    "data": {
+    "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/js/AUS_adm2.json",
+    "format": {"type": "topojson", "feature": "AUS_adm2"}
+    },
+    "transform": [
+    {
+    "lookup": "properties.NAME_1",
+    "from": {
+    "data": {
+    "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
+    },
+    "key": "state",
+    "fields": ["price"]
+    }
+    }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+        "color": {
+            "field": "price",
+            "type": "quantitative",
+            "scale": {"type": "threshold","domain":[1000000,8000000],"scheme": "reds"},
+            "legend": {"format": ".1s"}
+    },
+    "tooltip": [
+        {"field": "price", "type": "quantitative", "title": "properity price"},
+        {"field": "lon", "type": "quantitative","title": "longotide"},
+        {"field": "lat", "type": "quantitative","title": "latitude"},
+        {"field": "state", "type": "nominal","title": "state"}
+    ]
+    }
+}
+   
