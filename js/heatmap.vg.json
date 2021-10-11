@@ -14,8 +14,8 @@
         }
     },
     "vconcat": [{
-        "width": 480,
-        "height":500,
+        "width": 400,
+        "height":300,
         "transform": [
           {
             "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",
@@ -40,7 +40,7 @@
             "aggregate": "average",
             "type": "quantitative",
             "legend": {
-                "title": null
+                "title": "Average price","format": ".1s"
             }
         },
         "tooltip": [
