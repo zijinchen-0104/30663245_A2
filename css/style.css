@@ -19,7 +19,7 @@ body {
 }
 
 .vis-container {
-    width: 10%;
+    width: 100%;
 }
 
 .description h2,
@@ -36,7 +36,7 @@ h1 {
 }
 
 .pure-g {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 }
 
 .small-font {

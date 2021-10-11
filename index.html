@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
@@ -39,7 +39,6 @@
                 <div class="description description-right"></div>
                     <h2>Overall Australia property trends over time</h2>
                     <p>.............. </p>
-                </div>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -119,7 +118,8 @@
     var specVis4 = "js/linechart.vg.json"
     var specVis5 = "js/heatmap.vg.json"
 
-    vegaEmbed('#vis1', specVis1, {"actions": false});
+    vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    }).catch(console.error);
   
     vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
     }).catch(console.error);
