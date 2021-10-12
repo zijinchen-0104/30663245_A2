@@ -5,7 +5,6 @@
     },
     "width": 400,
     "height": 300,
-    "title": "Time and City VS Price",
     "transform": [
           {
               "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",

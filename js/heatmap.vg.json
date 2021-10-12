@@ -3,7 +3,6 @@
     "data": {
         "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
     },
-    "title": {"text":"Bedroom size and Time VS Price"},
     "config": {
         "view": {
             "strokeWidth": 0,

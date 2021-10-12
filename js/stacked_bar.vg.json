@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 400,
     "height": 300,
-    "title": { "text": "City and Property type VS Price" },
     "data": { "url": "https://raw.githubusercontent.com/zijinchen-0104/Week10-HW/main/perfect.csv" },
     "encoding": {
         "y": {
@@ -25,7 +24,7 @@
                     "field": "property_type",
                     "type": "nominal",
                     "title": "Property type",
-                    "scale": { "domain": ["house", "townhouse", "unit"], "range": ["#fdbb84", "#bcbddc", "#a1d99b"] }
+                    "scale": { "domain": ["house", "townhouse", "unit"], "range": ["#f768a1","#74c476","#9e9ac8"] }
                 },
                 "opacity": { "condition": { "param": "property_highlight", "value": 0.9 }, "value": 0.2 },
                 "tooltip": [
@@ -38,7 +37,7 @@
         {
       "mark": {
         "type": "text",
-        "dx": 400
+        "dx": 200
       },
       "encoding": {"text":{ "aggregate": "average", "field": "price", "type": "quantitative", "format": ".2f"}}
     }

@@ -4,6 +4,13 @@
 
 h1 {
     font-weight: 900;
+    text-align: center;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
@@ -11,7 +18,7 @@ body {
 }
 
 .page {
-    width: 900px;
+    width: 950px;
     background-color: white;
     margin: auto;
     padding: 50px;
@@ -36,9 +43,13 @@ h1 {
 }
 
 .pure-g {
-    margin-bottom: 7px;
+    margin-bottom: 30px;
 }
 
 .small-font {
     font-size: 14px;
+}
+
+#c_align{
+    text-align: center;
 }

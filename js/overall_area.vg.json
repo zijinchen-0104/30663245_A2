@@ -1,16 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"},
-  "title":"Overall price change over time",
   "vconcat": [{
-    "width": 450,
+    "width": 700,
     "height":280,
     "transform": [
       {
         "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",
         "as" : "date_new"
       }],
-    "mark": "area",
+    "mark": {"type":"area","color":"#fc9272"},
     "encoding": {
       "x": {
         "timeUnit":"yearmonth",
@@ -26,14 +25,14 @@
               ]
     }
   }, {
-    "width": 480,
+    "width": 700,
     "height": 60,
     "transform": [
       {
         "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",
         "as" : "date_new"
       }],
-    "mark": "area",
+    "mark": {"type":"area","color":"#fc9272"},
     "params": [{
       "name": "brush",
       "select": {"type": "interval", "encodings": ["x"]}

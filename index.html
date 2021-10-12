@@ -16,6 +16,9 @@
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
   
 </head>
 <body>
@@ -25,33 +28,32 @@
          <div class="pure-g">
            <div class="pure-u-1-1">
              <h1>Australia's Property Evaluation</h1>
-             <p>This page shows the distribution of Melbourne property and the evaluation of Australian property.</p>
+             <p id="c_align">This page shows the distribution of Australian property distribution and evaluations.</p>
            </div>
          </div>
         <!-- end Title and subtitle -->
 
+
         <!-- Overall area chart -->
         <div class="pure-g">
-            <div class="pure-u-2-3">
-                <div id="vis1" class="vis-container"></div>
-            </div>
-            <div class="pure-u-1-3">
-                <div class="description description-right"></div>
-                    <h2>Overall Australia property trends over time</h2>
-                    <p>.............. </p>
-            </div>
+            <div class="pure-u-1-1">
+                <h2 style="color:blue" id="c_align">Australian property trends over time</h2>
+                <center><div id="vis1" class="vis-container" ></div></center>
+                <p id="c_align">From the above area chart, we can see that Australia's property prices <span style="color:darkorchid;font-weight:700">fluctuated</span> from September 2018 to January 2021 and gradually increased. Property prices were the lowest around January of each year but then showed an upward trend. The highest value was in March 2021, with an average price of <span style="color:red;font-weight:700">$940839.45</span>.</p>
+                <p id="c_align"><span style="font-weight:700; font-size: 20px">Next, let us analyze the impact of multiple factors on property prices.</span></p>
         </div>
-        <!-- end pure grid group -->
+        <!-- end Overall area chart -->
+
      
          <!-- Aus property map -->
          <div class="pure-g">
-             <div class="pure-u-1-3">
+             <div class="pure-u-2-5">
                <div class="description description-left">
-                 <h2>Australia property distribution</h2>
-                 <p>From the right stacked bar chart, we can know the distribution of Melbourne properties is concentrated near the city and diverges along the coastline. The saturation red color shows that the higher priced properties are near the city and along the sea. The north and east area's properties are relatively lower. </p>
+                 <h2 style="color:blue" id="c_align">Australian property distribution</h2>
+                 <p>The right-hand-side map compares the property price trends among five states in Australia, i.e., Victoria, Queensland, New South Wales, South Australia and Western Australia. The color goes from lighter to darker, which means the price is getting higher and higher. We can see that <span style="color:red;font-weight:700">New South Wales</span> has the <span style="color:red;font-weight:700">highest</span> property price and <span style="color:salmon;font-weight:700">South Australia</span> has the <span style="color:salmon;font-weight:700">lowest</span> property price.</p>
                </div>
              </div>
-             <div class="pure-u-2-3">
+             <div class="pure-u-3-5">
                <div id="vis3" class="vis-container"></div>
              </div>
          </div>
@@ -59,14 +61,14 @@
      
          <!-- Stacked bar chart -->
          <div class="pure-g">
-             <div class="pure-u-2-3">
+             <div class="pure-u-3-5">
                <div id="vis2"  class="vis-container"></div>
              </div>
-             <div class="pure-u-1-3">
+             <div class="pure-u-2-5">
                <div class="description description-right">
-                 <h2>Australian property price VS property type among each city</h2>
-                 <p>From the left stacked bar chart, we can know that Sydney's properties have the highest price among all Australian cities, the second one is Melbourne. The number annotations on the chart show the average properties price in each city. 
-                 It also shows that the house prices are highest and the unit prices are lowest, no matter in which city.
+                 <h2 style="color:blue" id="c_align">Property type among each city VS Price</h2>
+                 <p>From the left stacked bar chart, we can know that <span style="color:red;font-weight:700">Sydney</span>'s properties have the <span style="color:red;font-weight:700">highest</span> price among all Australian cities, the <span style="color:orangered;font-weight:700">second</span> one is <span style="color:orangered;font-weight:700">Melbourne</span>. The number annotations on the chart show the average properties price in each city. 
+                 It also shows that the <span style="color:#f768a1;font-weight:700">house</span> prices are <span style="color:red;font-weight:700">highest</span> and the <span style="color:#9e9ac8;font-weight:700">unit</span> prices are <span style="color:salmon;font-weight:700">lowest</span>, no matter in which city.
                 </p>
                </div>
              </div>
@@ -76,12 +78,12 @@
 
          <!--Line chart-->
          <div class="pure-g">
-            <div class="pure-u-1-3">
+            <div class="pure-u-2-5">
                 <div class="description description-left"></div>
-                <h2>City and Time VS Price</h2>
-                <p>........</p>
+                <h2 style="color:blue" id="c_align">City and Time VS Price</h2>
+                <p>The right-hand-side line chart shows the trend of changes in average property prices between different cities over time. Sydney is the number one city in property prices, far higher than other cities, followed by Melbourne. The lowest property price is in Adelaide. <span style="color:#fed976;font-weight:700">Sydney</span> and <span style="color:#6baed6;font-weight:700">Melbourne</span> property prices <span style="color:red;font-weight:700">fluctuated significantly</span>, while other cities were relatively stable.</p>
             </div>
-            <div class="pure-u-2-3">
+            <div class="pure-u-3-5">
                 <div id="vis4"  class="vis-container"></div>
             </div>
           
@@ -90,13 +92,13 @@
 
         <!--Heatmap-->
         <div class="pure-g">
-            <div class="pure-u-2-3">
+            <div class="pure-u-3-5">
               <div id="vis5"  class="vis-container"></div>
             </div>
-            <div class="pure-u-1-3">
+            <div class="pure-u-2-5">
               <div class="description description-right">
-                <h2>Bedroom size and Time VS Price</h2>
-                <p>........</p>
+                <h2 style="color:blue" id="c_align">Bedroom size and Time VS Price</h2>
+                <p>The heatmap on the left shows the effect of different bedroom sizes on housing prices over time. We know that the prices of a house with <span style="color:darkblue;font-weight:700">5</span> bedrooms are the <span style="color:red;font-weight:700">highest</span>, and the prices of a house with <span style="color:#7fcdbb;font-weight:700">2 to 4</span> bedrooms are almost the <span style="color:red;font-weight:700">same</span>. From <span style="color:teal;font-weight:700">January to February</span> of each year, the average prices of all bedroom sizes are relatively <span style="color:teal;font-weight:700">low</span>, while from <span style="color:red;font-weight:700">September to November</span> are relatively <span style="color:red;font-weight:700">high</span>.</p>
               </div>
             </div>
           
@@ -104,15 +106,15 @@
         <!-- end Heatmap -->
 
         <div class="pure-g">
-            <div class="pure-u-1-1 small-font">
-              <p>This visualisation is created by <a href="https://github.com/zijinchen-0104/30663245_A2" target="_blank">Zijin Chen</a>. The datasource is <a href="https://www.kaggle.com/suryajadahake/australia-property-sales" target="_blank">from Kaggle website</href>.</p>
-            </div>
+            <center><div class="pure-u-1-1 small-font">
+                <p>This visualisation is created by <a href="https://github.com/zijinchen-0104/30663245_A2" target="_blank">Zijin Chen</a>. The datasource is <a href="https://www.kaggle.com/suryajadahake/australia-property-sales" target="_blank">from Kaggle website</href>.</p>
+            </div></center>
         </div>
 
     </div>
 
 <script type="text/javascript">
-    var specVis1 = "js/overall_area.vg.josn"
+    var specVis1 = "js/overall_area.vg.json"
     var specVis2 = "js/stacked_bar.vg.json"
     var specVis3 = "js/aus_pro_map.vg.json"
     var specVis4 = "js/linechart.vg.json"
