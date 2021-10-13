@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": 300,
+  "title": "Australian Property Sales Price",
+  "width": 500,
+  "height": 400,
   "projection": {"type": "equirectangular"},
   "data": {
   "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/js/AUS_adm2.json",
@@ -25,27 +26,26 @@
           "lookup": "properties.NAME_1",
           "from": {
               "data": {
-                  "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
+                  "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/map.csv"
               },
               "key": "state",
-              "fields": ["price"]
+              "fields": ["average price"]
           }
       }
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
       "color": {
-          "field": "price",
+          "field": "average price",
           "type": "quantitative",
-          "scale": {"type": "threshold","domain":[2000000,3000000,4000000],"range":["#fdbe85", "#fd8d3c","#e6550d", "#a63603"]},
-          "legend": {"format": ".1s","title":"Price"}
+          "scale": {"type": "threshold","domain":[550000,700000,750000,900000],"range":["#fdd0a2","#fdae6b", "#fd8d3c","#d94801", "#a63603"]},
+          "legend": {"format": ".1s"}
   },
   "tooltip": [
-      {"field": "price", "type": "quantitative", "title": "Properity price"},
+      {"field": "average price", "type": "quantitative", "title": "Properity price"},
       {"field": "properties.NAME_1", "type": "nominal","title": "State"}
   ]
   }
-  }],
-  "config": {"style": {"cell": {"stroke": "transparent"}}}
+  }]
 }
  

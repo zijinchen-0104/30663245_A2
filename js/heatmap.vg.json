@@ -3,15 +3,6 @@
     "data": {
         "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
     },
-    "config": {
-        "view": {
-            "strokeWidth": 0,
-            "step": 13
-        },
-        "axis": {
-            "domain": false
-        }
-    },
     "vconcat": [{
         "width": 400,
         "height":300,
