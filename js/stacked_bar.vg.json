@@ -37,7 +37,7 @@
         {
       "mark": {
         "type": "text",
-        "dx": 200
+        "dx": 220
       },
       "encoding": {"text":{ "aggregate": "average", "field": "price", "type": "quantitative", "format": ".2f"}}
     }

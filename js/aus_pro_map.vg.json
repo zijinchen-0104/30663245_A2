@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Australian Property Sales Price",
   "width": 500,
-  "height": 400,
+  "height": 300,
   "projection": {"type": "equirectangular"},
   "data": {
   "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/js/AUS_adm2.json",
