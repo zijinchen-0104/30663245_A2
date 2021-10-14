@@ -3,7 +3,7 @@
     "data": {
       "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
     },
-    "width": 400,
+    "width": "container",
     "height": 300,
     "transform": [
           {

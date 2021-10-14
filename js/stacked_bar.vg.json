@@ -33,13 +33,6 @@
                     { "field": "city_name", "type": "nominal", "title": "City name" }
                 ]
             }
-        },
-        {
-      "mark": {
-        "type": "text",
-        "dx": 220
-      },
-      "encoding": {"text":{ "aggregate": "average", "field": "price", "type": "quantitative", "format": ".2f"}}
-    }
+        }
   ]
 }
