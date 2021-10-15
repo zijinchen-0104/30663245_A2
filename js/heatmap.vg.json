@@ -23,7 +23,7 @@
         "y": {
             "field": "bedrooms",
             "type": "ordinal",
-            "title": "Bedroom size"
+            "title": "Bedroom number"
         },
         "color": {
             "field": "price",
@@ -36,7 +36,7 @@
         "tooltip": [
                       { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".2f" },
                       { "timeUnit":"yearmonth","field": "date_new", "type": "ordinal", "title": "Year and Month" },
-                      { "field": "bedrooms", "type": "ordinal", "title": "Bedroom Size" }
+                      { "field": "bedrooms", "type": "ordinal", "title": "Bedroom Number" }
                   ]
     }
       }]
