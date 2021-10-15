@@ -3,9 +3,10 @@
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: 1100;
     font-size: 45px;
     text-align: center;
+    font-family: 'Andada Pro', serif;
 }
 
 h2{

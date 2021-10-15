@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
+    "background":"#fff7fb",
+    "width": 450,
     "height": 300,
     "data": { "url": "https://raw.githubusercontent.com/zijinchen-0104/Week10-HW/main/perfect.csv" },
     "encoding": {
@@ -28,7 +29,7 @@
                 },
                 "opacity": { "condition": { "param": "property_highlight", "value": 0.9 }, "value": 0.2 },
                 "tooltip": [
-                    { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".2f" },
+                    { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" },
                     { "field": "property_type", "type": "nominal", "title": "Property type" },
                     { "field": "city_name", "type": "nominal", "title": "City name" }
                 ]

@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background":"#fff7fb",
   "width": "container",
   "height": 300,
   "projection": {"type": "equirectangular"},
@@ -42,7 +43,7 @@
           "title": "Average Price"
   },
   "tooltip": [
-      {"field": "average price", "type": "quantitative", "title": "Properity price"},
+      {"field": "average price", "type": "quantitative", "title": "Properity price","format": ".1s"},
       {"field": "properties.NAME_1", "type": "nominal","title": "State"}
   ]
   }

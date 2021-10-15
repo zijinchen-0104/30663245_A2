@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background":"#fff7fb",
   "data": {"url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"},
   "vconcat": [{
     "width": 800,
@@ -20,7 +21,7 @@
       },
       "y": {"aggregate":"average","field": "price", "type": "quantitative","axis": {"title": "Average price","grid": false,"format":".1s"}},
       "tooltip": [
-                  { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".2f" },
+                  { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" },
                   { "timeUnit":"yearmonth","field": "date_new", "type": "temporal", "title": "Time" }
               ]
     }
@@ -48,10 +49,10 @@
         "aggregate":"average",
         "field": "price",
         "type": "quantitative",
-        "axis": {"tickCount": 3, "grid": false,"title": "Average price","format":".1s"}
+        "axis": {"tickCount": 3, "grid": false,"title": null,"format":".1s"}
       },
       "tooltip": [
-                  { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".2f" },
+                  { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" },
                   { "timeUnit":"yearmonth","field": "date_new", "type": "temporal", "title": "Time" }
               ]
     }
