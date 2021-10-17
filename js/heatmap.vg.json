@@ -5,7 +5,7 @@
         "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
     },
     "vconcat": [{
-        "width": 450,
+        "width": 480,
         "height":300,
         "transform": [
           {
@@ -36,8 +36,7 @@
         },
         "tooltip": [
                       { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" },
-                      { "timeUnit":"yearmonth","field": "date_new", "type": "ordinal", "title": "Year and Month" },
-                      { "field": "bedrooms", "type": "ordinal", "title": "Bedroom Number" }
+                      { "timeUnit":"yearmonth","field": "date_new", "type": "ordinal", "title": "Year and Month" }
                   ]
     }
       }]

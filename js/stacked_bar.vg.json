@@ -29,9 +29,7 @@
                 },
                 "opacity": { "condition": { "param": "property_highlight", "value": 0.9 }, "value": 0.2 },
                 "tooltip": [
-                    { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" },
-                    { "field": "property_type", "type": "nominal", "title": "Property type" },
-                    { "field": "city_name", "type": "nominal", "title": "City name" }
+                    { "aggregate": "average", "field": "price", "type": "quantitative", "title": "Average price", "format": ".1s" }
                 ]
             }
         }

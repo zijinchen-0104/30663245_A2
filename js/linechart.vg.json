@@ -1,96 +1,108 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "background":"#fff7fb",
+  "background": "#fff7fb",
   "data": {
-    "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
+      "url": "https://raw.githubusercontent.com/zijinchen-0104/30663245_A2/master/data/A2.csv"
   },
-  "width": "container",
+  "width": 450,
   "height": 300,
-  "transform": [
-        {
-            "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",
-            "as" : "date_new"
-        }],
-  "layer": [
-    { 
+  "transform": [{
+      "calculate": "timeParse(datum['date_sold'], '%d/%m/%Y')",
+      "as": "date_new"
+  }],
+  "layer": [{
       "encoding": {
-        "x": {"field": "date_new", "timeUnit":"yearmonth","type": "temporal","title":"Time","axis": {"grid": false}},
-        "y": {"field": "price", "aggregate":"average","type": "quantitative","scale": {"domain": [400000,1400000]},"title":"Average price","axis": {"grid": false}},
-        "color": {"field": "city_name", "type": "nominal","title": "City name","scale":{
-            "domain":[
-                "Adelaide","Brisbane","Canberra","Melbourne","Perth","Sydney"
-            ],"range":[
-              "#78c679",
-              "#d9d9d9",
-              "#d9d9d9",
-              "#fed976",
-              "#d9d9d9",
-              "#67a9cf"
+          "x": { "field": "date_new", "timeUnit": "yearmonth", "type": "temporal", "title": "Time", "axis": { "grid": false } },
+          "y": { "field": "price", "aggregate": "average", "type": "quantitative", "scale": { "domain": [400000, 1400000] }, "title": "Average price", "axis": { "grid": false } },
+          "color": {
+              "field": "city_name",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                  "domain": [
+                      "Adelaide", "Brisbane", "Canberra", "Melbourne", "Perth", "Sydney"
+                  ],
+                  "range": [
+                      "#78c679",
+                      "#d9d9d9",
+                      "#d9d9d9",
+                      "#fed976",
+                      "#d9d9d9",
+                      "#67a9cf"
 
-            ]
-        }},"opacity":{"value":1}
-      },
-      "layer": [
-        {"mark": "line"},
-        {
-          "params": [{
-            "name": "label",
-            "select": {
-              "type": "point",
-              "encodings": ["x"],
-              "nearest": true,
-              "on": "mouseover"
-            }
-          }],
-          "mark": "point",
-          "encoding": {
-            "opacity": {
-              "condition": {
-                "param": "label",
-                "empty": false,
-                "value": 1
-              },
-              "value": 0
-            }
-          }
-        }
-      ]
-    },
-    {
-      "transform": [{"filter": {"param": "label", "empty": false}}],
-      "layer": [
-        {
-          "mark": {"type": "rule", "color": "gray"},
-          "encoding": {
-            "x": {"type": "temporal", "field": "date_new", "timeUnit":"yearmonth","aggregate": "min"}
-          }
-        },
-        {
-          "encoding": {
-            "text": {"type": "quantitative","aggregate":"average", "field": "price","format":".1s"},
-            "x": {"type": "temporal", "field": "date_new","timeUnit":"yearmonth"},
-            "y": {"type": "quantitative", "aggregate":"average","field": "price"}
+                  ]
+              }
           },
-          "layer": [
-            {
-              "mark": {
-                "type": "text",
-                "stroke": "white",
-                "strokeWidth": 2,
-                "align": "left",
-                "dx": 5,
-                "dy": -5
-              }
-            },
-            {
-              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+          "opacity": { "value": 1 }
+      },
+      "layer": [{
               "encoding": {
-                "color": {"type": "nominal", "field": "city_name"}
-              }
-            }
-          ]
+                  "text": { "field": "city_name" },
+                  "opacity": {
+                      "condition": { "test": "datum['yearmonth_date_new']>1613000000000", "value": 1 },
+                      "value": 0
+                  }
+              },
+              "mark": { "type": "text" ,"align": "left", "dx": 4}
+          },
+          { "mark": "line" },{
+        "params": [{
+          "name": "label",
+          "select": {
+            "type": "point",
+            "encodings": ["x"],
+            "nearest": true,
+            "on": "mouseover"
+          }
+        }],
+        "mark": "point",
+        "encoding": {
+          "opacity": {
+            "condition": {
+              "param": "label",
+              "empty": false,
+              "value": 1
+            },
+            "value": 0
+          }
         }
+      }
       ]
-    }
+  },{
+    "transform": [{"filter": {"param": "label", "empty": false}}],
+    "layer": [
+      {
+        "mark": {"type": "rule", "color": "gray"},
+        "encoding": {
+          "x": {"type": "temporal", "field": "date_new", "timeUnit":"yearmonth","aggregate": "min"}
+        }
+      },
+      {
+        "encoding": {
+          "text": {"type": "quantitative","aggregate":"average", "field": "price","format":".1s"},
+          "x": {"type": "temporal", "field": "date_new","timeUnit":"yearmonth"},
+          "y": {"type": "quantitative", "aggregate":"average","field": "price"}
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "stroke": "white",
+              "strokeWidth": 2,
+              "align": "left",
+              "dx": 5,
+              "dy": -5
+            }
+          },
+          {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+            "encoding": {
+              "color": {"type": "nominal", "field": "city_name"}
+            }
+          }
+        ]
+      }
+    ]
+  }
   ]
 }
